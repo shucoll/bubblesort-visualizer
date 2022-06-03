@@ -1,38 +1,111 @@
-.App {
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  padding: 2rem;
+  background-color: #593fec;
+}
+
+.header__buttons {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button {
+  border: none;
+  cursor: pointer;
+  border-radius: 0;
+  text-decoration: none;
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: inherit;
+  font-size: 16px;
+  width: fit-content;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button:hover {
+  color: #4caf50;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.button:focus {
+  outline: 0;
+}
+
+.button:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.grid-container {
+  display: flex;
+  padding: 2rem 2rem 3.2rem 3.2rem;
+  /* margin: 2rem 2rem 3rem 3.2rem; */
+  position: relative;
+}
+
+.line__container {
+  min-width: 0;
+}
+
+.line__vertical {
+  border-left: 5px solid;
+  height: 100%;
+}
+
+.line__horizontal {
+  border-bottom: 5px solid;
+  width: 100%;
+}
+
+.desc {
+  position: absolute;
+  font-size: 1.4rem;
+}
+
+.desc__vertical {
+  left: -70px;
+  top: 50%;
+  transform: rotate(270deg);
+}
+
+.desc__horizontal {
+  bottom: 10px;
+  left: 50%;
+}
+
+.values {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  margin: 0 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.array-bars {
+  display: flex;
+  align-items: flex-end;
+  padding: 0 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.array-bar {
+  background-color: #67b9a7;
+  margin: 0 0.15%;
 }
